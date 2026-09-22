@@ -179,6 +179,15 @@ section{padding:96px 0;}
 .about-grid{display:grid; grid-template-columns:1.1fr .9fr; gap:56px; align-items:start;}
 .about-grid p{color:var(--text-dim); margin-bottom:16px;}
 .about-grid strong{color:var(--text);}
+.proof-list{display:flex; flex-direction:column; gap:12px; margin-top:20px;}
+.proof-list li{
+  font-size:.92rem; color:var(--text); padding:14px 16px 14px 42px; position:relative;
+  background:var(--surface); border:1px solid var(--border); border-radius:12px;
+}
+.proof-list li::before{
+  content:'✓'; position:absolute; left:16px; top:14px; color:var(--green); font-weight:800;
+}
+.proof-list strong{color:var(--green);}
 .founder-card{
   background:var(--surface); border:1px solid var(--border); border-radius:var(--radius);
   padding:26px; box-shadow:var(--shadow);
