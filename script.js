@@ -117,6 +117,31 @@ if (typedEl) {
   }
 }
 
+// Interactive calculator: horas liberadas por mes al automatizar reportes con IA
+(function () {
+  const horas = document.getElementById('calcHoras');
+  const personas = document.getElementById('calcPersonas');
+  const reduccion = document.getElementById('calcReduccion');
+  const output = document.getElementById('calcOutput');
+  if (!horas || !personas || !reduccion || !output) return;
+  function recalc() {
+    const h = parseFloat(horas.value);
+    const p = parseFloat(personas.value);
+    const r = parseFloat(reduccion.value);
+    if (isNaN(h) || isNaN(p) || isNaN(r) || h < 0 || p < 0) {
+      output.textContent = '0 h';
+      return;
+    }
+    const ahorro = h * p * 4.33 * r;
+    output.textContent = Math.round(ahorro).toLocaleString('es-PE') + ' h';
+  }
+  [horas, personas, reduccion].forEach(el => {
+    el.addEventListener('input', recalc);
+    el.addEventListener('change', recalc);
+  });
+  recalc();
+})();
+
 // Flip cards: click/keyboard toggles between front and back content
 document.querySelectorAll('.flip-card').forEach(card => {
   const front = card.querySelector('.flip-content');

@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="./assets/favicon.svg">
 <title>RELIABILIT-IA Academia — IA aplicada al mantenimiento industrial y minero</title>
 <meta name="description" content="Comunidad de clases y asesorías de Inteligencia Artificial aplicada al mantenimiento y la confiabilidad de activos, para minería y otras industrias. Dictadas por profesionales en actividad.">
 <meta property="og:title" content="RELIABILIT-IA Academia">
@@ -26,14 +27,15 @@
 <header id="navbar">
   <div class="nav-inner">
     <a href="#inicio" class="brand">
-      <span class="brand-mark">RA</span>
-      <span class="brand-name">RELIABILIT-IA<br><small>ACADEMIA</small></span>
+      <img src="./assets/logo.svg" alt="RELIABILIT-IA" class="brand-logo">
+      <span class="brand-badge">ACADEMIA</span>
     </a>
     <nav class="nav-links">
       <a href="#inicio" class="nav-link">Inicio</a>
       <a href="#comunidad" class="nav-link">La comunidad</a>
       <a href="#temas" class="nav-link">Qué enseñamos</a>
       <a href="#como-funciona" class="nav-link">Cómo funciona</a>
+      <a href="#calculadora" class="nav-link">Calculadora</a>
       <a href="#agenda" class="nav-link">Próxima clase</a>
       <a href="https://wa.me/51997610310" target="_blank" rel="noopener" class="nav-cta">Únete</a>
     </nav>
@@ -313,6 +315,41 @@
     </div>
   </section>
 
+  <section id="calculadora">
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <span class="eyebrow">Modelo interactivo</span>
+        <h2>Calcula cuánto tiempo podrías ahorrar</h2>
+        <p>Una estimación simple de cuánto tiempo libera tu equipo al automatizar reportes y análisis de mantenimiento con IA. Ajusta los valores a tu realidad.</p>
+      </div>
+      <div class="calc-box reveal">
+        <div class="calc-inputs">
+          <label class="calc-field">
+            <span>Horas semanales en reportes/análisis manual</span>
+            <input type="number" id="calcHoras" min="0" step="1" value="6">
+          </label>
+          <label class="calc-field">
+            <span>Personas de tu equipo que hacen este trabajo</span>
+            <input type="number" id="calcPersonas" min="1" step="1" value="3">
+          </label>
+          <label class="calc-field">
+            <span>Reducción esperada del tiempo con IA</span>
+            <select id="calcReduccion">
+              <option value="0.3">30% (conservador)</option>
+              <option value="0.5" selected>50% (típico)</option>
+              <option value="0.7">70% (óptimo)</option>
+            </select>
+          </label>
+        </div>
+        <div class="calc-result">
+          <div class="calc-result-label">Horas liberadas por mes</div>
+          <div class="calc-result-value" id="calcOutput">39 h</div>
+          <div class="calc-result-note">Basado en la reducción de tiempo que reportan participantes de talleres similares al automatizar reportes con agentes de código. Es una estimación referencial, no una garantía.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="agenda">
     <div class="section-inner">
       <div class="section-head reveal" style="margin:0 auto 48px; text-align:center;">
@@ -341,13 +378,25 @@
           <div class="pillar-icon">💬</div>
           <h3>WhatsApp</h3>
           <p>La forma más rápida de unirte y recibir el aviso de la próxima clase.</p>
-          <a href="https://wa.me/51997610310" target="_blank" rel="noopener" class="btn btn-outline">+51 997 610 310</a>
+          <a href="https://wa.me/51997610310?text=Hola%2C%20quiero%20unirme%20a%20la%20comunidad%20de%20RELIABILIT-IA%20Academia" target="_blank" rel="noopener" class="btn btn-outline">+51 997 610 310</a>
         </div>
         <div class="join-card reveal">
           <div class="pillar-icon">✉️</div>
           <h3>Correo</h3>
           <p>Para propuestas de temas, alianzas con empresas o consultas puntuales.</p>
           <a href="mailto:miguelcquispe@gmail.com" class="btn btn-outline">miguelcquispe@gmail.com</a>
+        </div>
+        <div class="join-card reveal">
+          <div class="pillar-icon">▶️</div>
+          <h3>YouTube</h3>
+          <p>Videos y demos del catálogo de RELIABILIT-IA mientras se graban las primeras clases.</p>
+          <a href="https://www.youtube.com/@miguelangelcayllahuaquispe998" target="_blank" rel="noopener" class="btn btn-outline">Ver canal</a>
+        </div>
+        <div class="join-card reveal">
+          <div class="pillar-icon">🔗</div>
+          <h3>LinkedIn</h3>
+          <p>Sigue la página de empresa para novedades de la comunidad y del catálogo.</p>
+          <a href="https://www.linkedin.com/company/reliabilit-ia/" target="_blank" rel="noopener" class="btn btn-outline">RELIABILIT-IA en LinkedIn</a>
         </div>
       </div>
     </div>
@@ -357,11 +406,16 @@
 
 <footer>
   <div class="footer-inner">
-    <a href="#inicio" class="brand-name"><strong>RELIABILIT-IA</strong> Academia</a>
+    <a href="#inicio" class="footer-brand">
+      <img src="./assets/logo.svg" alt="RELIABILIT-IA" class="brand-logo">
+      <span class="brand-badge">ACADEMIA</span>
+    </a>
     <div class="footer-links">
       <a href="https://angel19968.github.io/miguel-cayllahua/" target="_blank" rel="noopener">Fundador</a>
       <a href="https://angel19968.github.io/reliabilit-ia/" target="_blank" rel="noopener">RELIABILIT-IA</a>
-      <a href="https://www.linkedin.com/in/miguelcayllahua/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.linkedin.com/in/miguelcayllahua/" target="_blank" rel="noopener">LinkedIn personal</a>
+      <a href="https://www.linkedin.com/company/reliabilit-ia/" target="_blank" rel="noopener">LinkedIn empresa</a>
+      <a href="https://www.youtube.com/@miguelangelcayllahuaquispe998" target="_blank" rel="noopener">YouTube</a>
       <a href="mailto:miguelcquispe@gmail.com">Correo</a>
     </div>
     <p class="footer-note">© 2026 RELIABILIT-IA Academia. Comunidad de aprendizaje construida por profesionales en actividad.</p>

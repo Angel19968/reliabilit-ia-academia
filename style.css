@@ -73,14 +73,11 @@ section{padding:96px 0;}
   display:flex; align-items:center; justify-content:space-between; gap:20px;
 }
 .brand{display:flex; align-items:center; gap:10px; font-weight:700;}
-.brand-mark{
-  width:34px; height:34px; border-radius:9px;
-  background:linear-gradient(135deg, var(--green), var(--indigo));
-  display:flex; align-items:center; justify-content:center;
-  font-size:.75rem; color:#06110c; font-weight:800; letter-spacing:-.02em;
+.brand-logo{height:24px; width:auto; display:block;}
+.brand-badge{
+  font-size:.62rem; font-weight:800; letter-spacing:.08em; color:var(--text-dim);
+  border:1px solid var(--border); border-radius:6px; padding:3px 7px; text-transform:uppercase;
 }
-.brand-name{font-size:.98rem; letter-spacing:.01em;}
-.brand-name small{display:block; font-size:.68rem; font-weight:600; color:var(--text-dim); letter-spacing:.04em;}
 .nav-links{display:flex; align-items:center; gap:26px;}
 .nav-link{
   font-size:.88rem; color:var(--text-dim); font-weight:600;
@@ -255,6 +252,27 @@ section{padding:96px 0;}
 .step-card h3{font-size:1rem; margin-bottom:8px;}
 .step-card p{font-size:.88rem; color:var(--text-dim);}
 
+/* calculadora interactiva */
+.calc-box{
+  display:grid; grid-template-columns:1.1fr .9fr; gap:0; max-width:920px; margin:0 auto;
+  background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden;
+}
+.calc-inputs{padding:32px; display:flex; flex-direction:column; gap:20px;}
+.calc-field{display:flex; flex-direction:column; gap:8px; font-size:.86rem; color:var(--text-dim); font-weight:600;}
+.calc-field input, .calc-field select{
+  background:var(--bg-alt); border:1px solid var(--border); border-radius:10px; color:var(--text);
+  padding:11px 14px; font-size:.95rem; font-family:inherit;
+}
+.calc-field input:focus, .calc-field select:focus{outline:none; border-color:var(--green);}
+.calc-result{
+  background:linear-gradient(180deg, rgba(52,211,153,.14), rgba(52,211,153,.04));
+  padding:32px; display:flex; flex-direction:column; justify-content:center; text-align:center;
+  border-left:1px solid var(--border);
+}
+.calc-result-label{font-size:.8rem; text-transform:uppercase; letter-spacing:.05em; color:var(--text-dim); font-weight:700;}
+.calc-result-value{font-size:2.4rem; font-weight:800; color:var(--green); margin:10px 0;}
+.calc-result-note{font-size:.76rem; color:var(--text-faint); line-height:1.5;}
+
 /* agenda / próximas clases */
 .agenda-card{
   background:var(--surface); border:1px dashed rgba(148,163,184,.3); border-radius:var(--radius);
@@ -294,7 +312,7 @@ footer{border-top:1px solid var(--border); padding:40px 0; margin-top:40px;}
   max-width:1180px; margin:0 auto; padding:0 28px; display:flex; justify-content:space-between;
   align-items:center; flex-wrap:wrap; gap:16px;
 }
-.footer-inner .brand-name{font-size:.9rem;}
+.footer-brand{display:flex; align-items:center; gap:10px;}
 .footer-links{display:flex; gap:18px; flex-wrap:wrap;}
 .footer-links a{font-size:.85rem; color:var(--text-dim);}
 .footer-links a:hover{color:var(--text);}
@@ -317,6 +335,8 @@ footer{border-top:1px solid var(--border); padding:40px 0; margin-top:40px;}
   .steps{grid-template-columns:repeat(2,1fr);}
   .join-grid{grid-template-columns:1fr;}
   .compare{grid-template-columns:1fr;}
+  .calc-box{grid-template-columns:1fr;}
+  .calc-result{border-left:none; border-top:1px solid var(--border);}
 }
 @media (max-width: 560px){
   section{padding:64px 0;}
