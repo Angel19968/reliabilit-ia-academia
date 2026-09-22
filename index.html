@@ -47,32 +47,64 @@
 <main>
 
   <section id="inicio" class="hero">
-    <div class="section-inner hero-inner">
-      <span class="eyebrow">● Comunidad abierta · Perú y LatAm</span>
-      <h1>IA aplicada al <span class="accent">mantenimiento industrial y minero</span></h1>
-      <p class="lead">
-        Somos una comunidad de ingenieros que dicta clases y asesorías prácticas sobre cómo usar
-        Inteligencia Artificial —prompt engineering, agentes de código y machine learning— para
-        resolver problemas reales de mantenimiento, confiabilidad y monitoreo de condición, tanto
-        en minería como en otras industrias.
-      </p>
-      <div class="hero-ctas">
-        <a href="https://wa.me/51997610310" target="_blank" rel="noopener" class="btn btn-primary">
-          Únete a la comunidad por WhatsApp
-        </a>
-        <a href="#temas" class="btn btn-outline">Ver qué enseñamos</a>
+    <div class="section-inner hero-grid">
+      <div class="hero-inner">
+        <span class="eyebrow reveal">● Comunidad abierta · Perú y LatAm</span>
+        <h1 class="reveal">IA aplicada al <span class="accent">mantenimiento industrial y minero</span></h1>
+        <p class="lead reveal">
+          Somos una comunidad de ingenieros que dicta clases y asesorías prácticas sobre cómo usar
+          Inteligencia Artificial —prompt engineering, agentes de código y machine learning— para
+          resolver problemas reales de mantenimiento, confiabilidad y monitoreo de condición, tanto
+          en minería como en otras industrias.
+        </p>
+        <div class="hero-ctas reveal">
+          <a href="https://wa.me/51997610310" target="_blank" rel="noopener" class="btn btn-primary">
+            Únete a la comunidad por WhatsApp
+          </a>
+          <a href="#temas" class="btn btn-outline">Ver qué enseñamos</a>
+        </div>
+        <div class="hero-stats reveal">
+          <div class="hero-stat"><b class="counter" data-target="6">0</b><span>áreas de especialización</span></div>
+          <div class="hero-stat"><b class="counter" data-target="20" data-suffix="+">0</b><span>herramientas y tecnologías</span></div>
+          <div class="hero-stat"><b>Multi-industria</b><span>minería, manufactura, energía</span></div>
+        </div>
       </div>
-      <div class="hero-stats">
-        <div class="hero-stat"><b>100% práctico</b><span>casos reales de planta y mina</span></div>
-        <div class="hero-stat"><b>Multi-industria</b><span>minería, manufactura, energía</span></div>
-        <div class="hero-stat"><b>Docentes en actividad</b><span>no solo teoría de aula</span></div>
+      <div class="hero-terminal reveal" aria-hidden="true">
+        <div class="terminal-head">
+          <span class="dot" style="background:#ff5f57"></span>
+          <span class="dot" style="background:#febc2e"></span>
+          <span class="dot" style="background:#28c840"></span>
+          <span class="terminal-title">prompt_mantenimiento.md</span>
+        </div>
+        <div class="terminal-body">
+          <p class="term-line term-prompt">&gt; <span id="typedPrompt"></span><span class="caret">▌</span></p>
+          <div class="term-response" id="termResponse">
+            <p>✓ Leyendo 14 meses de paradas del CMMS…</p>
+            <p>✓ MTBF actual: <b>642 h</b> &nbsp;·&nbsp; MTTR: <b>3.2 h</b></p>
+            <p>✓ Ajuste Weibull: β=2.71, η=780 h</p>
+            <p class="term-ok">→ 3 activos críticos identificados</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
+  <div class="marquee reveal" aria-label="Herramientas y tecnologías">
+    <div class="marquee-track">
+      <span>Python</span><span>Power BI</span><span>Minitab</span><span>RAPTOR</span><span>Prompt Engineering</span>
+      <span>Claude para mantenimiento</span><span>Machine Learning</span><span>Deep Learning</span>
+      <span>Visión Artificial</span><span>Estadística Descriptiva</span><span>Estadística Inferencial</span>
+      <span>Data Science</span><span>Weibull</span><span>RCA / Ishikawa</span>
+      <span>Python</span><span>Power BI</span><span>Minitab</span><span>RAPTOR</span><span>Prompt Engineering</span>
+      <span>Claude para mantenimiento</span><span>Machine Learning</span><span>Deep Learning</span>
+      <span>Visión Artificial</span><span>Estadística Descriptiva</span><span>Estadística Inferencial</span>
+      <span>Data Science</span><span>Weibull</span><span>RCA / Ishikawa</span>
+    </div>
+  </div>
+
   <section id="comunidad">
     <div class="section-inner about-grid">
-      <div>
+      <div class="reveal">
         <span class="eyebrow">La comunidad</span>
         <h2 style="font-size:clamp(1.6rem,3vw,2.1rem); font-weight:800; margin-bottom:18px;">
           Nace de la práctica, no de la teoría
@@ -90,7 +122,7 @@
           mantenimiento" — sin necesidad de ser programador.
         </p>
       </div>
-      <div class="founder-card">
+      <div class="founder-card reveal">
         <span class="tag">Fundador</span>
         <h3>Miguel Cayllahua Quispe</h3>
         <p>Ingeniero Mecatrónico · Confiabilidad, CBM &amp; Machine Learning aplicado al mantenimiento. Fundador de RELIABILIT-IA.</p>
@@ -105,41 +137,141 @@
 
   <section id="temas">
     <div class="section-inner">
-      <div class="section-head">
+      <div class="section-head reveal">
         <span class="eyebrow">Qué enseñamos</span>
         <h2>Un currículo pensado para mantenimiento, no para programadores</h2>
-        <p>Cada tema parte de un problema real de planta o mina, y usa la IA como herramienta, no como fin en sí mismo.</p>
+        <p>Cada tarjeta se voltea: haz clic para ver las herramientas concretas y un ejemplo real de aplicación.</p>
       </div>
       <div class="pillars">
-        <div class="pillar-card">
-          <div class="pillar-icon">🤖</div>
-          <h3>Fundamentos de IA y LLMs</h3>
-          <p>Qué es un modelo de lenguaje, prompt engineering y cómo elegir la herramienta correcta (chat vs. agente de código).</p>
+        <div class="pillar-card flip-card reveal" tabindex="0">
+          <div class="flip-content">
+            <div class="pillar-icon">🤖</div>
+            <h3>IA Generativa aplicada a mantenimiento</h3>
+            <p>Lo que ninguna otra plataforma de mantenimiento enseña todavía en español.</p>
+            <span class="flip-hint">Clic para ver herramientas ↻</span>
+          </div>
+          <div class="flip-back" hidden>
+            <div class="tags">
+              <span>Prompt Engineering</span><span>Claude para mantenimiento</span>
+              <span>Agentes de código</span><span>Automatización de reportes</span>
+            </div>
+            <p class="example">Ej: pídele a un agente que arme un dashboard de disponibilidad a partir de tu Excel de paradas.</p>
+            <span class="flip-hint">← Volver</span>
+          </div>
         </div>
-        <div class="pillar-card">
-          <div class="pillar-icon">📉</div>
-          <h3>Confiabilidad y CBM</h3>
-          <p>MTBF/MTTR, análisis de fallas, monitoreo de condición y estadística de confiabilidad aplicada con ayuda de IA.</p>
+
+        <div class="pillar-card flip-card reveal" tabindex="0">
+          <div class="flip-content">
+            <div class="pillar-icon">📉</div>
+            <h3>Estadística para Confiabilidad</h3>
+            <p>La base matemática detrás de todo diagnóstico de fallas serio.</p>
+            <span class="flip-hint">Clic para ver herramientas ↻</span>
+          </div>
+          <div class="flip-back" hidden>
+            <div class="tags">
+              <span>Estadística Descriptiva</span><span>Estadística Inferencial</span>
+              <span>Análisis de Weibull</span><span>MTBF / MTTR</span>
+            </div>
+            <p class="example">Ej: ¿tu distribución de fallas es realmente Weibull, o lo asumiste sin probarlo?</p>
+            <span class="flip-hint">← Volver</span>
+          </div>
         </div>
-        <div class="pillar-card">
-          <div class="pillar-icon">⚙️</div>
-          <h3>Automatización con agentes de código</h3>
-          <p>Cómo pedirle a un agente que construya dashboards, reportes y prototipos sin escribir código a mano.</p>
+
+        <div class="pillar-card flip-card reveal" tabindex="0">
+          <div class="flip-content">
+            <div class="pillar-icon">🛠️</div>
+            <h3>Herramientas de Análisis de Datos</h3>
+            <p>El mismo problema, resuelto con el software correcto para cada contexto de planta.</p>
+            <span class="flip-hint">Clic para ver herramientas ↻</span>
+          </div>
+          <div class="flip-back" hidden>
+            <div class="tags">
+              <span>Python</span><span>Power BI</span><span>Minitab</span><span>RAPTOR (RAM / RBD)</span>
+            </div>
+            <p class="example">Ej: la misma data de fallas resuelta en Python, Power BI y Minitab — para elegir con criterio, no por moda.</p>
+            <span class="flip-hint">← Volver</span>
+          </div>
         </div>
-        <div class="pillar-card">
-          <div class="pillar-icon">🔍</div>
-          <h3>RCA asistido por IA</h3>
-          <p>Ishikawa, árbol de fallas y diagnóstico de causa raíz apoyado en IA para acelerar la investigación de fallas.</p>
+
+        <div class="pillar-card flip-card reveal" tabindex="0">
+          <div class="flip-content">
+            <div class="pillar-icon">🧠</div>
+            <h3>Machine Learning &amp; Deep Learning</h3>
+            <p>De modelos predictivos simples a visión artificial sobre imágenes de planta.</p>
+            <span class="flip-hint">Clic para ver herramientas ↻</span>
+          </div>
+          <div class="flip-back" hidden>
+            <div class="tags">
+              <span>Machine Learning</span><span>Deep Learning</span>
+              <span>Visión Artificial</span><span>Modelos predictivos de falla</span>
+            </div>
+            <p class="example">Ej: detectar corrosión o fugas en una foto de planta con visión artificial, sin ser data scientist.</p>
+            <span class="flip-hint">← Volver</span>
+          </div>
         </div>
-        <div class="pillar-card">
-          <div class="pillar-icon">⛏️</div>
-          <h3>Minería 4.0 y sistemas digitales</h3>
-          <p>Taxonomía de activos, datos de flota y bases del backend/frontend para digitalizar procesos de mantenimiento.</p>
+
+        <div class="pillar-card flip-card reveal" tabindex="0">
+          <div class="flip-content">
+            <div class="pillar-icon">📊</div>
+            <h3>Data Science para Mantenimiento</h3>
+            <p>El flujo completo: de la data cruda del CMMS a un hallazgo accionable.</p>
+            <span class="flip-hint">Clic para ver herramientas ↻</span>
+          </div>
+          <div class="flip-back" hidden>
+            <div class="tags">
+              <span>ETL de datos de planta</span><span>Limpieza y preparación</span>
+              <span>Análisis exploratorio</span><span>Storytelling con datos</span>
+            </div>
+            <p class="example">Ej: de un Excel de paradas desordenado a un hallazgo que sí cambia una decisión de mantenimiento.</p>
+            <span class="flip-hint">← Volver</span>
+          </div>
         </div>
-        <div class="pillar-card">
-          <div class="pillar-icon">📊</div>
-          <h3>Machine Learning aplicado</h3>
-          <p>Modelos predictivos simples sobre datos reales de fallas, sin requerir experiencia previa en ciencia de datos.</p>
+
+        <div class="pillar-card flip-card reveal" tabindex="0">
+          <div class="flip-content">
+            <div class="pillar-icon">⛏️</div>
+            <h3>RCA y Sistemas Digitales</h3>
+            <p>Diagnóstico de causa raíz y las bases de la digitalización de activos.</p>
+            <span class="flip-hint">Clic para ver herramientas ↻</span>
+          </div>
+          <div class="flip-back" hidden>
+            <div class="tags">
+              <span>Ishikawa asistido por IA</span><span>Árbol de fallas (FTA)</span>
+              <span>Taxonomía de activos</span><span>Minería 4.0</span>
+            </div>
+            <p class="example">Ej: construir el Ishikawa de una falla real de la sesión, guiado paso a paso por un agente.</p>
+            <span class="flip-hint">← Volver</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="diferencia">
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <span class="eyebrow">Por qué esta academia</span>
+        <h2>No competimos por el mismo curso de Python</h2>
+        <p>La mayoría de plataformas enseña ciencia de datos genérica o mantenimiento genérico. Muy pocas combinan las dos cosas — y casi ninguna suma IA generativa aplicada al oficio.</p>
+      </div>
+      <div class="compare">
+        <div class="compare-col compare-generic reveal">
+          <span class="compare-label">Cursos genéricos de Data Science / Python</span>
+          <ul>
+            <li>Ejemplos de ventas, marketing o finanzas</li>
+            <li>Solo código, sin estadística de confiabilidad</li>
+            <li>Sin foco en mantenimiento ni minería</li>
+            <li>IA generativa tratada como tema aparte, si acaso</li>
+          </ul>
+        </div>
+        <div class="compare-col compare-ours reveal">
+          <span class="compare-label">RELIABILIT-IA Academia</span>
+          <ul>
+            <li>Ejemplos reales de MTBF, Weibull, paradas de planta</li>
+            <li>Código + estadística de confiabilidad + IA generativa juntos</li>
+            <li>100% orientado a mantenimiento industrial y minero</li>
+            <li>Prompt Engineering y Claude aplicados desde la primera clase</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -147,28 +279,28 @@
 
   <section id="como-funciona">
     <div class="section-inner">
-      <div class="section-head">
+      <div class="section-head reveal">
         <span class="eyebrow">Cómo funciona</span>
         <h2>Clases en vivo, guías interactivas y una comunidad de práctica</h2>
         <p>Un formato simple, inspirado en cómo ya construimos y validamos nuestros propios talleres internos.</p>
       </div>
       <div class="steps">
-        <div class="step-card">
+        <div class="step-card reveal">
           <div class="step-num">01</div>
           <h3>Únete a la comunidad</h3>
           <p>Entra al grupo de WhatsApp y cuéntanos tu industria y qué problema de mantenimiento quieres resolver con IA.</p>
         </div>
-        <div class="step-card">
+        <div class="step-card reveal">
           <div class="step-num">02</div>
           <h3>Clase en vivo</h3>
           <p>Sesiones online, con ejemplos reales de planta/mina y tiempo para preguntas y casos propios.</p>
         </div>
-        <div class="step-card">
+        <div class="step-card reveal">
           <div class="step-num">03</div>
           <h3>Guía interactiva</h3>
           <p>Cada clase queda documentada en una guía práctica que puedes revisar y repetir a tu ritmo.</p>
         </div>
-        <div class="step-card">
+        <div class="step-card reveal">
           <div class="step-num">04</div>
           <h3>Trae tu propio caso</h3>
           <p>Aplicas lo aprendido a un problema real de tu planta y lo compartes con la comunidad.</p>
@@ -179,11 +311,11 @@
 
   <section id="agenda">
     <div class="section-inner">
-      <div class="section-head" style="margin:0 auto 48px; text-align:center;">
+      <div class="section-head reveal" style="margin:0 auto 48px; text-align:center;">
         <span class="eyebrow" style="margin:0 auto 18px; display:inline-flex;">Próxima clase</span>
         <h2>Estamos preparando el calendario de la primera cohorte</h2>
       </div>
-      <div class="agenda-card">
+      <div class="agenda-card reveal">
         <span class="pulse-dot"></span><strong>Fecha por confirmar</strong>
         <h3>Primera clase abierta de la comunidad</h3>
         <p>Estamos grabando y afinando el contenido. Únete al grupo para enterarte primero de la fecha, el tema y el enlace de acceso.</p>
@@ -195,19 +327,19 @@
 
   <section id="contacto">
     <div class="section-inner">
-      <div class="section-head">
+      <div class="section-head reveal">
         <span class="eyebrow">Únete</span>
         <h2>Habla con nosotros</h2>
         <p>Cuéntanos tu industria y qué te gustaría aprender — así priorizamos los próximos temas de la comunidad.</p>
       </div>
       <div class="join-grid">
-        <div class="join-card">
+        <div class="join-card reveal">
           <div class="pillar-icon">💬</div>
           <h3>WhatsApp</h3>
           <p>La forma más rápida de unirte y recibir el aviso de la próxima clase.</p>
           <a href="https://wa.me/51997610310" target="_blank" rel="noopener" class="btn btn-outline">+51 997 610 310</a>
         </div>
-        <div class="join-card">
+        <div class="join-card reveal">
           <div class="pillar-icon">✉️</div>
           <h3>Correo</h3>
           <p>Para propuestas de temas, alianzas con empresas o consultas puntuales.</p>
