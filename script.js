@@ -160,3 +160,50 @@ document.querySelectorAll('.flip-card').forEach(card => {
     if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); flip(); }
   });
 });
+
+
+// Hero signal canvas: animated vibration-style waveform behind the hero copy
+(function () {
+  const canvas = document.getElementById('signalCanvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  let w, h, dpr;
+
+ function resize() {
+   dpr = Math.min(window.devicePixelRatio || 1, 2);
+   w = canvas.clientWidth;
+   h = canvas.clientHeight;
+   canvas.width = w * dpr;
+   canvas.height = h * dpr;
+   ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+ }
+  window.addEventListener('resize', resize);
+  resize();
+
+ const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let t = 0;
+
+ function drawWave(baseY, amp, freq1, freq2, color, lineWidth) {
+   ctx.beginPath();
+   for (let x = 0; x <= w; x += 4) {
+     const y = baseY
+     + Math.sin(x * freq1 + t) * amp
+     + Math.sin(x * freq2 + t * 1.7) * (amp * 0.35);
+     if (x === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+   }
+   ctx.strokeStyle = color;
+   ctx.lineWidth = lineWidth;
+   ctx.stroke();
+ }
+
+ function frame() {
+   if (!w || !h) { requestAnimationFrame(frame); return; }
+   ctx.clearRect(0, 0, w, h);
+   drawWave(h * 0.28, 24, 0.012, 0.031, 'rgba(99,102,241,0.32)', 1.4);
+   drawWave(h * 0.55, 32, 0.009, 0.021, 'rgba(52,211,153,0.5)', 1.8);
+   drawWave(h * 0.8, 18, 0.016, 0.04, 'rgba(236,72,153,0.26)', 1.2);
+   t += reduceMotion ? 0 : 0.028;
+   requestAnimationFrame(frame);
+ }
+  requestAnimationFrame(frame);
+})();
